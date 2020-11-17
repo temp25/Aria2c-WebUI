@@ -1,1 +1,1 @@
-web: chmod +x bootstrap.sh && ./bootstrap.sh
+web: npm start

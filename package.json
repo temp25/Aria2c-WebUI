@@ -1,11 +1,11 @@
 {
-  "name": "aria2cbackend",
+  "name": "aria2c-backend",
   "version": "1.0.0",
   "description": "Backend for Aria2c Web UI",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "scripts/startAria2RPC.sh",
+    "start": "node server.js"
   },
   "keywords": [
     "node",
@@ -17,12 +17,12 @@
   "license": "ISC",
   "dependencies": {
     "basic-auth": "^2.0.1",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
     "jayson": "^3.3.4",
     "kill-port": "^1.6.1",
     "minimist": "^1.2.5",
-    "pm2": "^4.5.0"
+    "ps-list": "^7.2.0",
+    "socket.io": "^2.3.0"
   }
 }
